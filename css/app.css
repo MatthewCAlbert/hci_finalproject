@@ -1007,6 +1007,10 @@ article.post {
   text-align: justify;
 }
 
+article.post .p-title {
+  text-align: left;
+}
+
 article.post div.platform-container {
   display: -webkit-box;
   display: -ms-flexbox;

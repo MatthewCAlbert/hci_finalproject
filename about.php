@@ -15,7 +15,8 @@
             <h2>Features</h2>
             <ul class="normal">
                 <li>Game Library Info</li>
-                <li>Responsive Layout</li>
+                <li>Responsive Layout (Mobile and Desktop Friendly)</li>
+                <li>Responsive Navigation (Mobile and Desktop)</li>
                 <li>Full width carousel</li>
                 <li>Page loader</li>
             </ul>
@@ -40,6 +41,7 @@
             <ul class="normal">
                 <li><a class="nlink" href="https://www.ubisoft.com/en-gb/">https://www.ubisoft.com/en-gb/</a></li>
                 <li><a href="https://codepen.io/rhulkashyap/pen/ONVPXb" class="nlink">Ripple Loading Effect</a></li>
+                <li><a href="https://dribbble.com/shots/4342121-Arcade-Logo-Animation" class="nlink">Logo Source</a></li>
             </ul>
         </section>
     </div>

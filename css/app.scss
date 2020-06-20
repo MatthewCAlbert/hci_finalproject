@@ -593,6 +593,9 @@ footer{
 
 article.post{
   text-align: justify;
+  .p-title{
+    text-align: left;
+  }
   div.platform-container{
     display: flex;
     padding: 10px 0;

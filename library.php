@@ -60,12 +60,20 @@
                         <div class="desc"><i class="fab fa-windows"></i><i class="fab fa-apple"></i><i class="fab fa-linux"></i></div>
                     </div>
                 </a>
-                <a class="item">
-                    <div class="img" style="background-image:url('img/games/csgo/cscover.jpg');"></div>
+                <a href="games/ac-unity.html" class="item">
+                    <div class="img" style="background-image:url('img/games/acu/acu-cover.jpg');"></div>
                     <div class="ctx">
-                        <div class="title">Counter-Strike: Global Offensive</div>
+                        <div class="title">Assassin's Creed Unity</div>
                         <div class="genre"></div>
-                        <div class="desc"><i class="fab fa-windows"></i><i class="fab fa-apple"></i><i class="fab fa-linux"></i></div>
+                        <div class="desc"><i class="fab fa-playstation"></i><i class="fab fa-xbox"></i><i class="fab fa-windows"></i></div>
+                    </div>
+                </a>
+                <a href="games/for-honor.html" class="item">
+                    <div class="img" style="background-image:url('img/games/forhonor/forhonor-cover.jpg');"></div>
+                    <div class="ctx">
+                        <div class="title">For Honor</div>
+                        <div class="genre"></div>
+                        <div class="desc"><i class="fab fa-playstation"></i><i class="fab fa-xbox"></i><i class="fab fa-windows"></i></div>
                     </div>
                 </a>
             </div>
