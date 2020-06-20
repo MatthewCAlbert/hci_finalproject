@@ -14,8 +14,11 @@
         <div class="wrapper">
             <input type="search" name="search" autocomplete="off"/>
             <div class="icon-wrapper">
-                <div class="search-icon"></div>
+                <i class="fas fa-search"></i>
             </div>
         </div>
     </div>
 </header>
+<div class="loader-wrapper">
+    <div class="ripple"></div>
+</div>

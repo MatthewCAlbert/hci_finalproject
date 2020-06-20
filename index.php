@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php include("include/head.php"); ?>
-    <title>The Arcade | Your Huge PP Game Library</title>
+    <title>The Arcade | Your Truly Gaming Website</title>
 </head>
 <body>
     <?php include("include/header.php"); ?>
@@ -58,7 +58,7 @@
         </section>
         <section class="free dark-grey logo-anim mg">
             <img src="/img/logo-transparent.gif" alt="logo" />
-            <p>Your Huge PP Game Library</p>
+            <p>Your Truly Gaming Website</p>
         </section>
         <section class="free red getmost mg">
             <div>

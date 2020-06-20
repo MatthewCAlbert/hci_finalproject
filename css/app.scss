@@ -5,7 +5,11 @@
   font-weight: 700;
 }
 
+html, body{ height:100%; margin:0; }
+
 body {
+  display:flex; 
+  flex-direction:column; 
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
@@ -14,6 +18,18 @@ body {
   color: #212529;
   text-align: left;
   background-color: #f8fafc;
+}
+
+.loader-wrapper{
+  z-index: 100;
+  position: fixed;
+  top:0; left:0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 $safemargin: 5%;
@@ -28,6 +44,15 @@ a.link{
     &:hover{
       color: white;
     }
+}
+
+a.nlink{
+  text-decoration: underline;
+}
+
+ul.normal{
+  padding-left: 20px;
+  list-style-type: circle;
 }
 
 .f-center{
@@ -74,31 +99,27 @@ header{
     }
     input{
       padding-left: 10px;
-      font-family: 'Open Sans';
+      font-size: 1em;
+      font-family: $menufont;
       margin: auto 0;
       height: $sh;
+      border: 0;
       &:focus{
         outline: none;
       }
-      border: 0;
+      &::-webkit-search-cancel-button{
+        display: none;
+      }
     }
     $sicon: 21px;
     .icon-wrapper{
       cursor: pointer;
+      color: white;
       margin: auto 0;
       padding: 0 10px;
       height: $sh;
       background-color: map-get($map: $bs4, $key: --gray);
       transition: .3s;
-      .search-icon{
-        margin-top: 3px;
-        width: $sicon;
-        height: $sicon;
-        background-size: contain;
-        filter: invert(1);
-        background-repeat: no-repeat;
-        background-image: url('/img/search-ico.png');
-      }
       &:hover{
         transition: .3s;
         background-color: lighten(map-get($bs4,--gray),10%);
@@ -110,6 +131,7 @@ header{
 .carousel-fallback{
     padding: 0 !important;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     .item{
         width: 100%;
@@ -164,6 +186,7 @@ div#body{
         
         .selector{
           display: flex;
+          text-shadow: 0 15px 75px rgba(0,0,0,.6);
           & > div{
             cursor: pointer;
           }
@@ -240,6 +263,8 @@ div#body{
 }
 
 footer{
+    margin-top:auto; 
+    clear: both;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -257,6 +282,28 @@ footer{
         align-items: center;
         height: 50px;
         background-color: black;
+        $isz : 30px;
+        $hvc : rgba(255,255,255,.6);
+        &:hover a{
+          background-color: $hvc;
+        }
+        a{
+          margin: 0 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1rem;
+          color: black;
+          background-color: white;
+          width: $isz; height: $isz;
+          border-radius: 20px;
+          &:hover{
+            background-color: white;
+          }
+          &:hover ~ *{
+            background-color: $hvc;
+          }
+        }
     }
     .lower{
         .navigation{
@@ -284,6 +331,19 @@ footer{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1.5rem;
+                $hvc : rgba(255,255,255,.6);
+                &:hover a{
+                  color: $hvc;
+                }
+                a{
+                  color: white;
+                  &:hover{
+                    color: white;
+                  }
+                  &:hover ~ *{
+                    color: $hvc
+                  }
+                }
             }
             .nav > *{
                 display: block;

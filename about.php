@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php include("include/head.php"); ?>
+    <title>Store | The Arcade</title>
+</head>
+<body>
+    <?php include("include/header.php"); ?>
+    <div id="body">
+        <section class="free mg">
+            <h1>About</h1>
+            <p>This is our Human Computer Interaction Final Project</p>
+            <h2>Features</h2>
+            <h2>Team Members</h2>
+            <ul class="normal">
+                <li>Matthew Christopher Albert - 2301848981</li>
+                <li>Timotius Austin - 2301849643</li>
+                <li>Rhenal Za Maulana Wongso - 2301849290</li>
+                <li>Fabianaugie Jametoni - 2301927462</li>
+            </ul>
+            <h2>Credits</h2>
+            <ul class="normal">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Javascript</li>
+                <li>jQuery 3.5.1</li>
+                <li>FontAwesome 5</li>
+            </ul>
+            <h2>References</h2>
+            <ul class="normal">
+                <li><a class="nlink" href="https://www.ubisoft.com/en-gb/">https://www.ubisoft.com/en-gb/</a></li>
+                <li><a href="https://codepen.io/rhulkashyap/pen/ONVPXb" class="nlink">Ripple Loading Effect</a></li>
+            </ul>
+        </section>
+    </div>
+    <?php include("include/footer.php"); ?>
+</body>
+</html>

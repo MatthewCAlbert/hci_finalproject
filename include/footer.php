@@ -1,9 +1,10 @@
 <footer>
     <div class="social">
-        <i>fa</i>
-        <i>fa</i>
-        <i>fa</i>
-        <i>fa</i>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-twitch"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
     <div class="lower">
         <div class="navigation">
@@ -11,7 +12,7 @@
                 <img src="img/logo-transparent.png" alt="logo" />
                 <p>The Arcade</p>
                 <hr style="margin-left:8px;">
-                <span>Your Huge PP Game Library</span>
+                <span>Your Truly Gaming Website</span>
             </div>
             <div class="nav">
                 <a class="link" href="#">HOME</a>
@@ -30,3 +31,4 @@
         </div>
     </div>
 </footer>
+<script src="/js/afterpage.js"></script>
