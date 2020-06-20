@@ -5,7 +5,7 @@
     <nav>
         <ul>
             <li><a class="link" href="/">Home</a></li>
-            <li><a class="link" href="store.php">Store</a></li>
+            <li><a class="link" href="library.php">Library</a></li>
             <li><a class="link" href="about.php">About</a></li>
         </ul>
     </nav>
@@ -25,7 +25,7 @@
             <a href="javascript:void(0)" class="close"><i class="fas fa-times"></i></a>
             <div class="link-wrapper">
                 <a href="/">HOME</a>
-                <a href="store.php">STORE</a>
+                <a href="library.php">LIBRARY</a>
                 <a href="about.php">ABOUT</a>
             </div>
         </div>

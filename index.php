@@ -26,25 +26,29 @@
         </section>
         <section class="free normal blue" style="margin-bottom:-20px;padding-bottom:40px;">
             <div class="title">
-                <h2>EXPLORE MORE GAMES</h2>
+                <h2>FEATURED TITLES</h2>
             </div>
             <div class="carousel-fallback">
-                <div class="item">
-                    <div class="img" style="background-image:url('https://media.makeameme.org/created/duar-terima-kasih.jpg');"></div>
-                    <div class="title">Duar meme</div>
-                    <div class="desc">Ini adalah ledakan</div>
-                </div>
-                <div class="item">
-                    <div class="img" style="background-image:url('https://media.makeameme.org/created/duar-terima-kasih.jpg');"></div>
-                    <div class="title">Duar meme</div>
-                    <div class="desc">Ini adalah ledakan</div>
-                </div>
-                <div class="item">
-                    <div class="img" style="background-image:url('https://media.makeameme.org/created/duar-terima-kasih.jpg');"></div>
-                    <div class="title">Duar meme</div>
-                    <div class="desc">Ini adalah ledakan</div>
-                </div>
+                <a href="#" class="item">
+                    <div class="img" style="background-image:url('img/games/vlr/Cover%20VLR.jpg');"></div>
+                    <div class="title">Valorant</div>
+                    <div class="genre"></div>
+                    <div class="desc"><i class="fab fa-windows"></i></div>
+                </a>
+                <a href="#" class="item">
+                    <div class="img" style="background-image:url('img/games/re/Cover%20RE.jpg');"></div>
+                    <div class="title">Resident Evil Village</div>
+                    <div class="genre"></div>
+                    <div class="desc"><i class="fab fa-playstation"></i><i class="fab fa-xbox"></i><i class="fab fa-windows"></i></div>
+                </a>
+                <a href="#" class="item">
+                    <div class="img" style="background-image:url('img/games/beatsaber/bscover.jpeg');"></div>
+                    <div class="title">Beat Saber</div>
+                    <div class="genre"></div>
+                    <div class="desc"><i class="fab fa-windows"></i><i class="fab fa-apple"></i><i class="fab fa-linux"></i></div>
+                </a>
             </div>
+            <br>
             <div class="f-center">
                 <button class="btn btn-fix btn-primary">EXPLORE</button>
             </div>

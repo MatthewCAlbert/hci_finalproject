@@ -19,7 +19,6 @@ String.prototype.create = function(o) {
 class Carousel{
     data = [
         {
-            "name":"",
             "text":"",
             "img_url":"",
             "url":""

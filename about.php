@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php include("include/head.php"); ?>
-    <title>Store | The Arcade</title>
+    <title>About | The Arcade</title>
 </head>
 <body>
     <?php include("include/header.php"); ?>
@@ -14,8 +14,10 @@
         <section class="free mg red">
             <h2>Features</h2>
             <ul class="normal">
+                <li>Game Library Info</li>
                 <li>Responsive Layout</li>
                 <li>Full width carousel</li>
+                <li>Page loader</li>
             </ul>
             <h2>Team Members</h2>
             <ul class="normal">

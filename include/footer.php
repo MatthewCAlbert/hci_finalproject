@@ -16,7 +16,7 @@
             </div>
             <div class="nav">
                 <a class="link" href="#">HOME</a>
-                <a class="link" href="#">STORE</a>
+                <a class="link" href="#">LIBRARY</a>
                 <a class="link" href="#">ABOUT</a>
             </div>
             <div class="lang">

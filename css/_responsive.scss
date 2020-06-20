@@ -8,6 +8,17 @@ $breakpoints: (
 
 $safemargin: 5%;
 
+@media (max-width: map-get($breakpoints,lg)){
+  section{
+    &.logo-anim{
+      p{
+          margin-bottom: 10px;
+          font-size: 1.5rem !important;
+          white-space: nowrap;
+      }
+    }
+  }
+}
 
 @media (max-width: map-get($breakpoints,md)){
   header.desktop{
