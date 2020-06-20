@@ -1,0 +1,308 @@
+@import 'component';
+
+@mixin mfbold {
+  font-family: $menufont;
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #212529;
+  text-align: left;
+  background-color: #f8fafc;
+}
+
+$safemargin: 5%;
+$headerh: 50px;
+
+a.link{
+    text-transform: uppercase;
+    color: #cccccc;
+    font-family: $menufont;
+    font-weight: 700;
+    padding: 0 5px;
+    &:hover{
+      color: white;
+    }
+}
+
+.f-center{
+    display: flex;
+    justify-content: center;
+}
+
+header{
+  z-index: 50;
+  position: fixed;
+  width: 100%;
+  top: 0; left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 $safemargin;
+  max-height: $headerh;
+  background-color: map-get($map: $colortheme, $key: dark-grey);
+  & > *:first-child{
+    width: 250px;
+    display: flex;
+    align-items: center;
+  }
+  img{
+    width: auto;
+    height: 90%;
+  }
+  nav{
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
+    ul > li{
+      float:left;
+    }
+  }
+  .search-bar{
+    $sh: 26px;
+    margin-top: 12px;
+    .wrapper{
+      background-color: white;
+      border-radius: 5px;
+      overflow: hidden;
+      display: flex;
+    }
+    input{
+      padding-left: 10px;
+      font-family: 'Open Sans';
+      margin: auto 0;
+      height: $sh;
+      &:focus{
+        outline: none;
+      }
+      border: 0;
+    }
+    $sicon: 21px;
+    .icon-wrapper{
+      cursor: pointer;
+      margin: auto 0;
+      padding: 0 10px;
+      height: $sh;
+      background-color: map-get($map: $bs4, $key: --gray);
+      transition: .3s;
+      .search-icon{
+        margin-top: 3px;
+        width: $sicon;
+        height: $sicon;
+        background-size: contain;
+        filter: invert(1);
+        background-repeat: no-repeat;
+        background-image: url('/img/search-ico.png');
+      }
+      &:hover{
+        transition: .3s;
+        background-color: lighten(map-get($bs4,--gray),10%);
+      }
+    }
+  }
+}
+
+.carousel-fallback{
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    .item{
+        width: 100%;
+        height: 300px;
+        margin: 0 20px;
+        cursor: pointer;
+        .img{
+            display: inline-flex;
+            width: 100%;
+            height: 200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .title{
+            font-size: 1.2rem;
+        }
+        .desc{
+            color: rgba(0,0,0,.5);
+        }
+    }
+}
+
+div#body{
+  margin-top: $headerh;
+  @include mfbold();
+  section{
+    width: 100%;
+    position: relative;
+
+    &.carousel{
+
+      height: 500px;
+      overflow: hidden;
+      .carousel-gallery{
+        z-index: -1;
+        background-image: url('https://www.nextlevelgaming.ca/wp-content/uploads/2020/05/assassins-creed-valhalla-generacionxbox-1.jpg');
+        background-position: center;
+        background-size: cover;
+        display: block;
+        width: 100%;
+        height: 500px;
+      }
+      .carousel-navigation-wrapper{
+        z-index: 5;
+        position: absolute;
+        left:0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+        .selector{
+          display: flex;
+          & > div{
+            cursor: pointer;
+          }
+        }
+        .navigator{
+          position: relative;
+          cursor: pointer;
+          width: 100px;
+        }
+      }
+
+    }
+
+    &.free{
+      padding: 0 $safemargin;
+      &.mg{
+        padding: 50px $safemargin;
+      }
+      &.normal{
+          & > .title{
+              text-align: center;
+              padding: 20px 0;
+              font-size: 1.2em;
+          }
+      }
+      &.dark-grey{
+        background-color: map-get($map: $colortheme, $key: dark-grey);
+        color: white;
+      }
+      &.blue{
+        background-color: map-get($map: $colortheme, $key: blue);
+        color: black;
+      }
+      &.red{
+        background-color: map-get($map: $colortheme, $key: red);
+        color: white;
+        clip-path: polygon(0 0, 47% 0, 50% 20px, 53% 0, 100% 0, 100% 100%, 0 100%);
+      }
+      &.getmost{
+          display: grid;
+          grid-template-columns: 200px 1fr;
+          img{
+              max-width: 100%;
+              object-fit: contain;
+              height: auto;
+          }
+          & > div:nth-child(2){
+             padding-left: 50px; 
+             font-size: 1.2rem;
+             line-height: 2rem;
+          }
+      }
+      &.logo-anim{
+        clip-path: polygon(0 0, 47% 0, 50% 20px, 100% 20px, 100% 0, 100% 100%, 0 100%);
+        display: flex;
+        justify-content: center;
+        img{
+            max-width: 880px;
+            height: auto;
+            width: 80vw;
+            padding-bottom: 20px;
+        }
+        margin-bottom: -20px;
+        p{
+            position: absolute;
+            left: 50vw; bottom: 65px;
+            font-size: xx-large;
+            transform: translateX(-50%);
+        }
+      }
+    }
+
+  }
+}
+
+footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: map-get($map: $colortheme, $key: dark-grey);
+    @include mfbold();
+    color: white;
+    width: 100%;
+    p{
+        margin: 0;;
+    }
+    .social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background-color: black;
+    }
+    .lower{
+        .navigation{
+            display: flex;
+            padding: 30px $safemargin;
+            justify-content: space-between;
+            height: 220px;
+            .left-side{
+                font-weight: 300;
+                img{
+                    width: 150px;
+                    height: auto;
+                }
+                p:nth-child(2){
+                    font-weight: 700;
+                }
+                *:not(img){
+                    padding-left: 8px;
+                }
+            }
+            .nav{
+                position: absolute;
+                left: 50vw;
+                transform: translateX(-50%);
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1.5rem;
+            }
+            .nav > *{
+                display: block;
+                padding: 0 20px;
+            }
+            .lang{
+                select{
+                    @include mfbold();
+                    color: white;
+                    background-color: transparent;
+                    border: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .attributon{
+            padding: 10px 0;
+            font-weight: 300;
+            text-align: center;
+        }
+    }
+}
