@@ -1,5 +1,5 @@
 <footer>
-    <div class="social">
+    <div class="social card-2">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-twitch"></i></a>
@@ -16,18 +16,20 @@
             </div>
             <div class="nav">
                 <a class="link" href="#">HOME</a>
-                <a class="link" href="#">HOME</a>
-                <a class="link" href="#">HOME</a>
-                <a class="link" href="#">HOME</a>
+                <a class="link" href="#">STORE</a>
+                <a class="link" href="#">ABOUT</a>
             </div>
             <div class="lang">
-                <select name="" id="">
-                    <option value="">English</option>
-                </select>
+                <div>
+                    <i class="fas fa-globe"></i>
+                    <select name="" id="">
+                        <option value="">English</option>
+                    </select>
+                </div>
             </div>
         </div>
         <div class="attributon">
-            MCA HCI @ 2020
+            Tugas Akhir HCI - 2020
         </div>
     </div>
 </footer>

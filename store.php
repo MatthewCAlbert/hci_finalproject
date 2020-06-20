@@ -7,33 +7,60 @@
 <body>
     <?php include("include/header.php"); ?>
     <div id="body">
-        <section class="carousel" id="c-1">
-            <div class="carousel-gallery">
-                <div class="carousel-content"></div>
+        <section class="free store mg yellow">
+            <div class="title">
+                <h1>STORE</h1>
             </div>
-            <div class="carousel-navigation-wrapper">
-                <div class="navigator left">
-                    <i class="chevron right"></i>
-                </div>
-                <div class="selector">
-                    <div>
-                        <p>Test</p>
-                    </div>
-                    <div>
-                        <p>Test</p>
-                    </div>
-                    <div>
-                        <p>Test</p>
+            <div class="container">
+                <div class="item">
+                    <div class="img" style="background-image:url('https://media.makeameme.org/created/duar-terima-kasih.jpg');"></div>
+                    <div class="ctx">
+                        <div class="title">Duar meme</div>
+                        <div class="genre">GORE</div>
+                        <div class="desc">Ini adalah ledakan</div>
                     </div>
                 </div>
-                <div class="navigator right">
-                    <i class="chevron left"></i>
+                <div class="item">
+                    <div class="img" style="background-image:url('https://media.makeameme.org/created/duar-terima-kasih.jpg');"></div>
+                    <div class="ctx">
+                        <div class="title">Duar meme</div>
+                        <div class="genre">GORE</div>
+                        <div class="desc">Ini adalah ledakan</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img" style="background-image:url('https://media.makeameme.org/created/duar-terima-kasih.jpg');"></div>
+                    <div class="ctx">
+                        <div class="title">Duar meme</div>
+                        <div class="genre">GORE</div>
+                        <div class="desc">Ini adalah ledakan</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img" style="background-image:url('https://media.makeameme.org/created/duar-terima-kasih.jpg');"></div>
+                    <div class="ctx">
+                        <div class="title">Duar meme</div>
+                        <div class="genre">GORE</div>
+                        <div class="desc">Ini adalah ledakan</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img" style="background-image:url('https://media.makeameme.org/created/duar-terima-kasih.jpg');"></div>
+                    <div class="ctx">
+                        <div class="title">Duar meme</div>
+                        <div class="genre">GORE</div>
+                        <div class="desc">Ini adalah ledakan</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img" style="background-image:url('https://media.makeameme.org/created/duar-terima-kasih.jpg');"></div>
+                    <div class="ctx">
+                        <div class="title">Duar meme</div>
+                        <div class="genre">GORE</div>
+                        <div class="desc">Ini adalah ledakan</div>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="free">
-            <h2>EXPLORE MORE GAMES</h2>
-            <button class="btn btn-fix btn-primary">HAHA</button>
         </section>
     </div>
     <?php include("include/footer.php"); ?>

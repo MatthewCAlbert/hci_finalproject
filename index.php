@@ -9,25 +9,18 @@
     <div id="body">
         <section class="carousel" id="c-1">
             <div class="carousel-gallery">
-                <div class="carousel-content"></div>
+                <div class="carousel-content">
+                    <div class="ctx"></div>
+                </div>
             </div>
             <div class="carousel-navigation-wrapper">
                 <div class="navigator left">
-                    <i class="chevron right"></i>
+                    <i class="fas fa-chevron-left"></i>
                 </div>
                 <div class="selector">
-                    <div>
-                        <p>Test</p>
-                    </div>
-                    <div>
-                        <p>Test</p>
-                    </div>
-                    <div>
-                        <p>Test</p>
-                    </div>
                 </div>
                 <div class="navigator right">
-                    <i class="chevron left"></i>
+                    <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
         </section>
@@ -53,7 +46,7 @@
                 </div>
             </div>
             <div class="f-center">
-                <button class="btn btn-fix btn-primary">HAHA</button>
+                <button class="btn btn-fix btn-primary">EXPLORE</button>
             </div>
         </section>
         <section class="free dark-grey logo-anim mg">
@@ -75,21 +68,38 @@
         let c_data = [
             {
                 "name":"Ascrod",
-                "text":"Assasin's Creed Valhalla",
-                "img_url":"https://www.nextlevelgaming.ca/wp-content/uploads/2020/05/assassins-creed-valhalla-generacionxbox-1.jpg",
+                "text":"Grand Theft Auto V",
+                "img_url":"../img/games/gta/SS1%20GTA.jpg",
                 "url":"#1"
             },
             {
                 "name":"Ascrod2",
-                "text":"Assasin's Creed Origins",
-                "img_url":"https://cdn.mos.cms.futurecdn.net/CjQ6M98b4UqdvNTTi5r4FT.jpg",
+                "text":"Resident Evil Village",
+                "img_url":"../img/games/re/SS1%20RE.jpg",
                 "url":"#2"
             },
-            
             {
                 "name":"wicer",
-                "text":"Witcher 3",
-                "img_url":"https://media.skyegrid.id/wp-content/uploads/2019/07/The-Witcher-3.jpg",
+                "text":"Valorant",
+                "img_url":"../img/games/vlr/SS1%20VLR.jpg",
+                "url":"#3"
+            },
+            {
+                "name":"wicer",
+                "text":"Beat Saber",
+                "img_url":"../img/games/beatsaber/ssbs1.jpg",
+                "url":"#3"
+            },
+            {
+                "name":"wicer",
+                "text":"Counter Strike: Global Offensive",
+                "img_url":"../img/games/csgo/sscs1.jpg",
+                "url":"#3"
+            },
+            {
+                "name":"wicer",
+                "text":"DOTA 2",
+                "img_url":"../img/games/dota2/ssdota1.jpg",
                 "url":"#3"
             }
         ]

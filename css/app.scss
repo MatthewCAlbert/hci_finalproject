@@ -60,7 +60,7 @@ ul.normal{
     justify-content: center;
 }
 
-header{
+header.desktop{
   z-index: 50;
   position: fixed;
   width: 100%;
@@ -128,12 +128,106 @@ header{
   }
 }
 
+header.mobile{
+  display: none;
+  color: white;
+  z-index: 50;
+  .logo{
+    max-width: 150px;
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
+  }
+  img{
+    max-width: 150px;
+    height: auto;
+  }
+  .search-toggle, .nav-toggle{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+  }
+  .nav-toggle{
+    .menu-bar{
+      visibility: hidden;
+      opacity: 0;
+      position: fixed;
+      width: 100%;
+      padding: 50px;
+      top: 0; left: -600px;
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      transition: .3s;
+      z-index: 30;
+      .close{
+        margin-bottom: 30px;
+      }
+      .link-wrapper{
+        display: flex;
+        flex-direction: column;
+        & > a{
+          @include mfbold();
+          font-size: 1.3rem;
+          display: block;
+          padding: 10px 30px;
+          &:hover{
+            background-color: rgba(255,255,255,.3);
+          }
+        }
+      }
+      &.active{
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  .search-toggle{
+    .search-bar{
+      visibility: hidden;
+      opacity: 0;
+      right:0; top:-20px;
+      position: absolute;
+      transition: .3s;
+      input{
+        font-size: 1em;
+        width: 100vw;
+        border: none;
+        padding: 10px 7%;
+        font-family: $menufont;
+        font-weight: 700;
+        color: black;
+        &:focus{
+          outline:none;
+        }
+      }
+      &.active{
+        opacity: 1;
+        visibility: visible;
+        top:50px;
+        transition: .3s;
+      }
+    }
+  }
+  position: fixed;
+  width: 100%;
+  top: 0; left: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 $safemargin;
+  height: $headerh;
+  background-color: map-get($map: $colortheme, $key: dark-grey);
+}
+
 .carousel-fallback{
     padding: 0 !important;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     .item{
+        max-width: 300px;
         width: 100%;
         height: 300px;
         margin: 0 20px;
@@ -163,17 +257,29 @@ div#body{
     position: relative;
 
     &.carousel{
-
-      height: 500px;
+      background-color: black;
+      height: 700px;
       overflow: hidden;
       .carousel-gallery{
         z-index: -1;
-        background-image: url('https://www.nextlevelgaming.ca/wp-content/uploads/2020/05/assassins-creed-valhalla-generacionxbox-1.jpg');
+        background-image: url('../img/games/gta/SS1 GTA.jpg');
         background-position: center;
         background-size: cover;
         display: block;
         width: 100%;
-        height: 500px;
+        height: 700px;
+      }
+      .carousel-content{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .ctx{
+          padding: 0 $safemargin;
+          font-size: 4rem;
+          color: white;
+          text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+        }
       }
       .carousel-navigation-wrapper{
         z-index: 5;
@@ -186,15 +292,39 @@ div#body{
         
         .selector{
           display: flex;
+          color: white;
           text-shadow: 0 15px 75px rgba(0,0,0,.6);
           & > div{
             cursor: pointer;
           }
+          & > *{
+            cursor: pointer;
+            padding: 0 5px;
+          }
         }
         .navigator{
+          padding: 10px;
           position: relative;
+          bottom: 20px;
           cursor: pointer;
           width: 100px;
+          color: white;
+          font-size: 3em;
+          display: flex;
+          transition: .3s;
+          justify-content: center;
+          $ce : 40px;
+          &.left{
+            padding-left: 0;
+            border-radius: 0 $ce $ce 0;
+          }
+          &.right{
+            padding-right: 0;
+            border-radius: $ce 0 0 $ce;
+          }
+          &:hover{
+            background-color: rgba(255,255,255,.2);
+          }
         }
       }
 
@@ -218,6 +348,10 @@ div#body{
       }
       &.blue{
         background-color: map-get($map: $colortheme, $key: blue);
+        color: black;
+      }
+      &.yellow{
+        background-color: map-get($map: $colortheme, $key: yellow);
         color: black;
       }
       &.red{
@@ -255,6 +389,54 @@ div#body{
             left: 50vw; bottom: 65px;
             font-size: xx-large;
             transform: translateX(-50%);
+        }
+      }
+
+      &.store{
+        $itemSize : 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        & > .title{
+          position: relative;
+          width: $itemSize*3;
+          left:-10px;
+        }
+        $ggap:20px;
+        .container{
+          display: grid;
+          justify-content: center;
+          column-gap: $ggap;
+          row-gap: $ggap;
+          position: relative;
+          left:-20px;
+          grid-template-columns: $itemSize $itemSize $itemSize;
+        }
+        .item{
+            background-color: white;
+            max-width: $itemSize;
+            width: 100%;
+            height: 300px;
+            margin: 0 20px;
+            cursor: pointer;
+            .ctx{
+              padding: 0 10px;
+            }
+            .img{
+                display: inline-flex;
+                width: 100%;
+                height: 200px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .title{
+                font-size: 1.2rem;
+            }
+            .desc{
+                color: rgba(0,0,0,.5);
+            }
         }
       }
     }
@@ -310,7 +492,7 @@ footer{
             display: flex;
             padding: 30px $safemargin;
             justify-content: space-between;
-            height: 220px;
+            height: 150px;
             .left-side{
                 font-weight: 300;
                 img{
@@ -366,3 +548,5 @@ footer{
         }
     }
 }
+
+@import 'responsive';

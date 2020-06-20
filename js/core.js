@@ -27,7 +27,7 @@ class Carousel{
     ]
     variable = {
         gallery: ".carousel-gallery",
-        content: ".carousel-content",
+        content: ".carousel-content .ctx",
         nav_wrapper: ".carousel-navigation-wrapper",
         navigator_prev: ".navigator.left",
         navigator_next: ".navigator.right",
@@ -56,6 +56,13 @@ class Carousel{
         $(this.target+" "+this.variable.navigator_prev).on("click",()=>{
             this.prevSlide();
         });
+        $(this.target+" "+this.variable.selector_wrapper).on("click",(e)=>{
+            this.currentPage = parseInt(e.target.getAttribute('aria-target'));
+            let start = this.currentPage*this.option.per_page;
+            this.loadSlide(start);
+        });
+
+        this.reloadSelector();
 
         //start loop
         if( this.option.autoplay ){
@@ -68,15 +75,34 @@ class Carousel{
             this.nextSlide();
         },this.option.slideDuration);
     }
+    reloadSelector(){
+        $(this.target+" "+this.variable.selector_wrapper).html('');
+        for( let i = 0 ; i < this.data.length ; i++ ){
+            let ccc = "<a href='javascript:void(0)'><i aria-target='"+i+"' class='far fa-circle'></i></a>";
+            if( i == this.currentPage ){
+                ccc = "<a href='javascript:void(0)'><i aria-target='"+i+"'  class='fas fa-circle'></i></a>";
+            }
+            $(this.target+" "+this.variable.selector_wrapper).append(ccc);
+        }
+    }
     loadSlide(start){
         let res = '';
         let datalen = this.data.length;
         for( let i = 0 ; i < this.option.per_page ; i++ ){
             let c = this.data[(start+i)%datalen];
             res += c.name;
-            $(this.target+" "+this.variable.gallery).css('background-image','url('+c.img_url+')');
-            $(this.target+" "+this.variable.content).html(c.text);
-            $(this.target+" "+this.variable.content).html(c.text);
+
+            //load pointer
+            this.reloadSelector();
+
+            //load content
+            $(this.target+" "+this.variable.gallery).fadeOut(200);
+            setTimeout(()=>{
+                $(this.target+" "+this.variable.gallery).css('background-image','url('+c.img_url+')');
+                $(this.target+" "+this.variable.gallery).fadeIn();
+            },400);
+            let cc = "<p>"+c.text+"</p>"
+            $(this.target+" "+this.variable.content).html(cc);
         }
     }
     nextSlide(){

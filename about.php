@@ -7,10 +7,16 @@
 <body>
     <?php include("include/header.php"); ?>
     <div id="body">
-        <section class="free mg">
+        <section class="free mg blue" style="margin-bottom:-20px;">
             <h1>About</h1>
             <p>This is our Human Computer Interaction Final Project</p>
+        </section>
+        <section class="free mg red">
             <h2>Features</h2>
+            <ul class="normal">
+                <li>Responsive Layout</li>
+                <li>Full width carousel</li>
+            </ul>
             <h2>Team Members</h2>
             <ul class="normal">
                 <li>Matthew Christopher Albert - 2301848981</li>
@@ -18,6 +24,8 @@
                 <li>Rhenal Za Maulana Wongso - 2301849290</li>
                 <li>Fabianaugie Jametoni - 2301927462</li>
             </ul>
+        </section>
+        <section class="free mg yellow">
             <h2>Credits</h2>
             <ul class="normal">
                 <li>HTML5</li>

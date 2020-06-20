@@ -1,0 +1,119 @@
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+);
+
+$safemargin: 5%;
+
+
+@media (max-width: map-get($breakpoints,md)){
+  header.desktop{
+    display: none;
+  }
+  header.mobile{
+    display: flex;
+  }
+  section{
+    &.store{
+      $itemSize2: 200px;
+      & > .title{
+        width: $itemSize2*2 !important;
+      }
+      .container{
+        grid-template-columns: $itemSize2 $itemSize2 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: map-get($breakpoints,sm)){
+    .carousel-fallback{
+        flex-direction: column;
+    }
+
+    section{
+        &.store{
+          & > .title{
+            width: 200px !important;
+          }
+          .container{
+            grid-template-columns: 200px !important;
+          }
+        }
+        &.carousel{
+            $ch:300px;
+            height: $ch !important;
+            .carousel-gallery{
+              display: block;
+              height: $ch !important;
+            }
+            .carousel-content{
+              .ctx{
+                font-size: 2rem !important;
+                text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+              }
+            }
+            .navigator{
+                padding: 10px;
+                width: 70px !important;
+                font-size: 2em !important;
+                $ce : 20px;
+                &.left{
+                  padding-left: 0;
+                  border-radius: 0 $ce $ce 0;
+                  margin-right: -20px;
+                }
+                &.right{
+                  padding-right: 0;
+                  border-radius: $ce 0 0 $ce;
+                }
+                &:hover{
+                  background-color: rgba(255,255,255,.2);
+                }
+              }
+        }
+        &.logo-anim{
+            p{
+                margin-bottom: 0;
+                font-size: 1em !important;
+                white-space: nowrap;
+            }
+        }
+        &.getmost{
+            grid-template-columns: 1fr !important;
+            div:nth-child(2){
+                padding: 0 !important;
+            }
+        }
+    }
+
+    footer{
+        .lower{
+            .navigation{
+                height: auto;
+                flex-direction: column-reverse;
+                padding: 10px $safemargin;
+                .nav{
+                    position:  relative !important;
+                    justify-content: center;
+                    text-align: center;
+                    left:0 !important;
+                    transform: none !important;
+                    & > *{
+                        font-size: .8em;
+                    }
+                }
+                .lang{
+                    i{
+                        color: #cccccc;
+                    }
+                    padding: 0 0 10px 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
