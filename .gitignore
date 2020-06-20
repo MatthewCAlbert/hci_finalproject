@@ -1,4 +1,4 @@
 .vscode/
 test/
 *test*
-img/games/*
+img/games/*/*.html
